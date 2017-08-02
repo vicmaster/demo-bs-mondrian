@@ -12,5 +12,8 @@ tmp/**/*
 !tmp/cache/.keep
 *.pyc
 
-config/database.yml
+
+# Ignore application configuration
+/config/application.yml
 /config/database.yml
+database.yml
