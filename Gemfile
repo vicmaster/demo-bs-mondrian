@@ -11,7 +11,6 @@ gem 'rails', '~> 5.1.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
-gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -24,7 +23,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -41,3 +39,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+platforms :jruby do
+  gem 'jruby-openssl'
+  gem 'activerecord-jdbc-adapter', git: 'https://github.com/jruby/activerecord-jdbc-adapter.git', branch: 'rails-5'
+  gem 'activerecord-jdbcpostgresql-adapter', git: 'https://github.com/jruby/activerecord-jdbc-adapter.git', branch: 'rails-5'
+  gem 'mondrian-olap', git: 'https://github.com/rsim/mondrian-olap.git'
+  gem 'pg', '0.17.1',  git: 'git://github.com/headius/jruby-pg.git', :branch => :master
+end
