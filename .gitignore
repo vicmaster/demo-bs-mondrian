@@ -11,3 +11,6 @@ tags
 tmp/**/*
 !tmp/cache/.keep
 *.pyc
+
+config/database.yml
+/config/database.yml

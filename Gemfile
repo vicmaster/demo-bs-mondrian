@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.1.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+
+gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
